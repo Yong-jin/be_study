@@ -12,12 +12,19 @@ public class StudentDTO {
 	String id;
 	int grade;
 	String jumin;
+	//LocalDateTime birthday;
 	String birthday;
 	String tel;
 	int height;
 	int weight;
 	int deptno1;
-	int deptno2;
+	//int deptno2;  //숫자타입 기본값 0 : 무조건 숫자 값!
+	Integer deptno2;  //제2전공이 없다 -> null   Nullable
+	
+	//int 기본타입 -> Integer  Wrapper 클래스
+	//double -> Double
+	//boolean -> Boolean
+	
 	int profno;
 	
 	public int getStudno() {
@@ -80,10 +87,11 @@ public class StudentDTO {
 	public void setDeptno1(int deptno1) {
 		this.deptno1 = deptno1;
 	}
-	public int getDeptno2() {
+	
+	public Integer getDeptno2() {
 		return deptno2;
 	}
-	public void setDeptno2(int deptno2) {
+	public void setDeptno2(Integer deptno2) {
 		this.deptno2 = deptno2;
 	}
 	public int getProfno() {
